@@ -8,6 +8,7 @@ function solution(s) {
     // 자르려는 길이로 나눠떨어진다면!!
     const strSlice = chunkString(s, slice);
     let newStr = '';
+
     for (let i = 0; i < strSlice.length; i++) {
       if (stack.length === 0 || stack[0] === strSlice[i])
         stack.push(strSlice[i]);
@@ -23,6 +24,7 @@ function solution(s) {
         }
       }
     }
+
     const len = stack.length;
     if (len === 1) {
       newStr += stack[0];
